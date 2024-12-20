@@ -1,10 +1,7 @@
 #!/bin/bash
 
 echo "Downloading, this might take a while..."
-aria2c --max-concurrent-downloads=3 --max-connection-per-server=16 \
-    --split=16 --min-split-size=1M --disk-cache=64M --file-allocation=none \
-    --continue --disable-ipv6=true --connect-timeout=60 --max-tries=5 --retry-wait=5 \
-    --summary-interval=120 --input-file=/links.txt \
+aria2c aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --continue --input-file=~/Sagemarker-Reforge/links.tx
 
 if [ ! -f libtcmalloc_minimal.so.4 ]; then
     aria2c -o libtcmalloc_minimal.so.4 \
