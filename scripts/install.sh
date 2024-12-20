@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Update Conda Env
-conda update -n base -c defaults conda -y
-conda install -c conda-forge ipykernel -y
-conda install python=3.10.15 -y
-conda install conda-forge::glib -y 
-conda install -c conda-forge libstdcxx-ng -y
-echo "la versión de python se actualizo a:"
-python --version
-
 # Clone Stable Diffusion reForge
 rm -rf /home/studio-lab-user/sagemaker-studiolab-notebooks
 cd /home/studio-lab-user
