@@ -1,0 +1,6 @@
+https://huggingface.co/personal1802/NTRMIXillustrious-XLNoob-XL4.0/resolve/main/ntrMIXIllustriousXL_v40.safetensors 
+    out=/home/studio-lab-user/stable-diffusion-webui-reForge/models/Stable-diffusion/ntrMIXIllustriousXL_v40.safetensors
+https://civitai.com/api/download/models/125843
+    out=/home/studio-lab-user/stable-diffusion-webui-reForge/models/ESRGAN/4x-UltraSharp.pth
+https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors 
+    out=/home/studio-lab-user/stable-diffusion-webui-reForge/models/ControlNet/controlnet_union.safetensors
