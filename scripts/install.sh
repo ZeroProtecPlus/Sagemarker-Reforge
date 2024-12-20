@@ -1,11 +1,22 @@
 #!/bin/bash
 
+# Update Conda Env
+conda update -n base -c defaults conda -y
+conda install -c conda-forge ipykernel -y
+conda install python=3.10.15 -y
+conda install conda-forge::glib -y 
+conda install -c conda-forge libstdcxx-ng -y
+echo "la versión de python se actualizo a:"
+python --version
+
 # Clone Stable Diffusion reForge
+rm -rf /home/studio-lab-user/sagemaker-studiolab-notebooks
+cd /home/studio-lab-user
 git clone https://github.com/lllyasviel/stable-diffusion-webui-forge.git
-cd stable-diffusion-webui-forge/
+cd ~/stable-diffusion-webui-forge/
 
 # Clone extensions
-source /home/studio-lab-user/extensions.sh
+source ~/Sagemarker-Reforge/scripts/extensions.sh
 
 echo "Installing extension dependencies (if any)"
 
@@ -35,8 +46,4 @@ rm -rf /home/studio-lab-user/tmp/controlnet_models
 mkdir -p /tmp/controlnet_models
 ln -vs /tmp/controlnet_models /home/studio-lab-user/stable-diffusion-webui-reForge/models/ControlNet/
 
-cd /home/studio-lab-user/
-wget https://github.com/openziti/zrok/releases/download/v0.4.23/zrok_0.4.23_linux_amd64.tar.gz
-mkdir zrok-conection
-tar -xf ./zrok*linux*.tar.gz -C ./zrok-conection
-mkdir -p ./zrok-conection/bin && install ./zrok-conection/zrok ./zrok-conection/bin
+echo "Installation completed"
