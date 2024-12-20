@@ -27,11 +27,11 @@ python -c "from launch import prepare_environment; prepare_environment()" --skip
 pip uninstall -y huggingface-hub
 pip install huggingface-hub==0.23.2 gdown aria2
 
-rm -rf /home/studio-lab-user/tmp
-rm -rf /home/studio-lab-user/stable-diffusion-webui-reForge/models/Stable-diffusion/tmp_models
+mkdir -rf /home/studio-lab-user/tmp
+mkdir /home/studio-lab-user/stable-diffusion-webui-reForge/models/Stable-diffusion/tmp_models
 ln -vs /tmp ~/tmp
-ln -vs /tmp/models /home/studio-lab-user/stable-diffusion-webui-reForge/models/Stable-diffusion/tmp_models
 mkdir -p /tmp/models
+ln -vs /tmp/models /home/studio-lab-user/stable-diffusion-webui-reForge/models/Stable-diffusion/tmp_models
 
 rm -rf /home/studio-lab-user/tmp/controlnet_models
 mkdir -p /tmp/controlnet_models
