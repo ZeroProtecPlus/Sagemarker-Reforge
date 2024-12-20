@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Downloading, this might take a while..."
-aria2c aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --continue --input-file=~/Sagemarker-Reforge/links.tx
+aria2c aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --continue --input-file=~/Sagemarker-Reforge/links.txt
 
 if [ ! -f libtcmalloc_minimal.so.4 ]; then
     aria2c -o libtcmalloc_minimal.so.4 \
